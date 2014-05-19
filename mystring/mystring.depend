@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1400500829 source:e:\oj\mystring\main.cpp
+	<iostream>
+	<cstring>
+	"mystring.h"
+
+1400472919 e:\oj\mystring\string.h
+
+1400472917 e:\oj\mystring\string.cpp
+	<iostream>
+	<cstring>
+	"String.h"
+
+1400501843 source:e:\oj\mystring\string.cpp
+	<iostream>
+	<cstring>
+	"mystring.h"
+
+1400501855 e:\oj\mystring\mystring.h
+
