@@ -10,12 +10,15 @@ class myString{
     void print();
     ~myString();
     void allocaStr(int len, char *&)const;
+    bool operator!=(const myString &right);
+    bool operator!=(const char * right);
+    bool operator==(const char* right);
+    bool operator==(const myString &right);
     myString& operator=(const myString &right);
     myString operator+(const myString &right);
   private:
     int length;
     char *ptr;
 };
-
 
 #endif // MYSTRING_H_INCLUDED

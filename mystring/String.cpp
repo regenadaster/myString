@@ -70,5 +70,45 @@ void myString::allocaStr(const int len,char *&str)const{
 myString::~myString(){
   delete this->ptr;
 }
-
+bool myString::operator==(const myString& right){
+  if(this==&right){
+    return true;
+  }
+  else{
+    if(!strcmp(this->ptr,right.ptr)){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+}
+bool myString::operator!=(const myString& right){
+  if(!strcmp(this->ptr,right.ptr)){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+bool myString::operator==(const char *right){
+  if(right!=NULL){
+    if(!strcmp(this->ptr,right)){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+}
+bool myString::operator!=(const char *right){
+  if(right!=NULL){
+    if(!strcmp(this->ptr,right)){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+}
 

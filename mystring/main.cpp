@@ -6,7 +6,18 @@ using namespace std;
 
 int main(){
   myString hello("hello");
+  myString hello2("hello");
+  if(hello==hello2){
+    cout<<"good"<<endl;
+  }
+  string my="how are you";
   myString world("world");
+  if(hello!=world){
+    cout<<"good"<<endl;
+  }
+  if(!(hello!="hello")){
+    cout<<"good"<<endl;
+  }
   myString helloworld;
   cout<<hello.Size()<<endl;
   helloworld=hello+world;
