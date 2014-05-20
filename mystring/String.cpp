@@ -41,6 +41,10 @@ myString::myString(const myString &other){
   strcpy(ptr,other.ptr);
   this->setSize(other.Size());
 }
+  /* tips: operator + overloaded must return new instance
+    can't return reference;
+
+  */
 myString myString::operator+(const myString &right){
   int i,len;
   char *str;
