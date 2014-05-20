@@ -16,6 +16,8 @@ class myString{
     bool operator==(const myString &right);
     myString& operator=(const myString &right);
     myString operator+(const myString &right);
+    int Compare(const myString &right);
+    int Compare(const char *right);
   private:
     int length;
     char *ptr;

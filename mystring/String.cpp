@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include "mystring.h"
-
+#include "utility.h"
 using namespace std;
 
 myString::myString(){
@@ -109,6 +109,47 @@ bool myString::operator!=(const char *right){
     else{
       return true;
     }
+  }
+}
+int myString::Compare(const char *right){
+  int len,i,maxLen,minLen;
+  if(right==NULL){
+    if(this->Size()){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+  }
+  else{
+    len=strlen(right);
+    minLen=minVal(len,this->Size());
+    maxLen=maxVal(len,this->Size());
+    for(i=0;i<minLen;i++){
+      if(this->ptr[i]<right[i]) return -1;
+      else{
+        if(this->ptr[i]>right[i]) return 1;
+      }
+    }
+    if(minLen==maxLen){
+      return 0;
+    }
+    else{
+      if(minLen==len){
+        return 1;
+      }
+      else{
+        return 0;
+      }
+    }
+  }
+}
+int myString::Compare(const myString &right){
+  if(&right==this){
+    return true;
+  }
+  else{
+    return this->Compare(right.ptr);
   }
 }
 

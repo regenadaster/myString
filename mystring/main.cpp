@@ -26,5 +26,7 @@ int main(){
   helloworld.print();
   helloworld=helloworld;
   helloworld.print();
+  cout<<hello.Compare(world)<<endl;
+  cout<<hello.Compare("hello")<<endl;
   return 0;
 }
